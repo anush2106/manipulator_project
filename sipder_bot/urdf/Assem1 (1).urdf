@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem1 (1)">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.1334E-18 -0.01378 -1.8141E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.31125" />
+      <inertia
+        ixx="0.00053528"
+        ixy="5.7025E-22"
+        ixz="-4.7976E-20"
+        iyy="0.0017256"
+        iyz="6.0781E-22"
+        izz="0.0011916" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="hip1">
+    <inertial>
+      <origin
+        xyz="-0.019683 -0.0061033 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.020238" />
+      <inertia
+        ixx="2.0599E-06"
+        ixy="-3.5219E-08"
+        ixz="-1.1581E-22"
+        iyy="2.0599E-06"
+        iyz="1.5882E-22"
+        izz="3.7856E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip1"
+    type="revolute">
+    <origin
+      xyz="0.1025 -0.065 0"
+      rpy="1.2442 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="leg1">
+    <inertial>
+      <origin
+        xyz="-0.019147 0.043897 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071825" />
+      <inertia
+        ixx="2.3125E-06"
+        ixy="1.4767E-06"
+        ixz="1.2705E-21"
+        iyy="2.3213E-06"
+        iyz="-1.5882E-21"
+        izz="4.6039E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg1"
+    type="revolute">
+    <origin
+      xyz="-0.01358 0 0.01"
+      rpy="1.5708 0.11409 0" />
+    <parent
+      link="hip1" />
+    <child
+      link="leg1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip2">
+    <inertial>
+      <origin
+        xyz="-0.0061033 -0.019683 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.020238" />
+      <inertia
+        ixx="2.0599E-06"
+        ixy="-3.5219E-08"
+        ixz="-5.294E-22"
+        iyy="2.0599E-06"
+        iyz="9.3802E-22"
+        izz="3.7856E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip2"
+    type="revolute">
+    <origin
+      xyz="0.1025 0.065 0"
+      rpy="1.5708 0 0.27915" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="leg2">
+    <inertial>
+      <origin
+        xyz="-0.019147 0.043897 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071825" />
+      <inertia
+        ixx="2.3125E-06"
+        ixy="1.4767E-06"
+        ixz="-7.4777E-22"
+        iyy="2.3213E-06"
+        iyz="4.2352E-22"
+        izz="4.6039E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg2"
+    type="revolute">
+    <origin
+      xyz="0 -0.01358 -0.01"
+      rpy="-1.5708 0.061399 1.5708" />
+    <parent
+      link="hip2" />
+    <child
+      link="leg2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip3">
+    <inertial>
+      <origin
+        xyz="-0.0061033 -0.019683 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.020238" />
+      <inertia
+        ixx="2.0599E-06"
+        ixy="-3.5219E-08"
+        ixz="-1.5882E-21"
+        iyy="2.0599E-06"
+        iyz="3.0771E-22"
+        izz="3.7856E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip3"
+    type="revolute">
+    <origin
+      xyz="-0.1025 0.065 0"
+      rpy="1.5708 0 0.69831" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="0.3" />
+  </joint>
+  <link
+    name="leg3">
+    <inertial>
+      <origin
+        xyz="-0.019147 0.043897 -0.00043326"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071825" />
+      <inertia
+        ixx="2.3125E-06"
+        ixy="1.4767E-06"
+        ixz="2.647E-23"
+        iyy="2.3213E-06"
+        iyz="4.2352E-22"
+        izz="4.6039E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg3"
+    type="revolute">
+    <origin
+      xyz="0.012067 -0.01358 -0.01"
+      rpy="-1.5708 -0.3205 1.5708" />
+    <parent
+      link="hip3" />
+    <child
+      link="leg3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip4">
+    <inertial>
+      <origin
+        xyz="-0.0061033 -0.019683 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.020238" />
+      <inertia
+        ixx="2.0599E-06"
+        ixy="-3.5219E-08"
+        ixz="-1.0588E-22"
+        iyy="2.0599E-06"
+        iyz="1.3235E-22"
+        izz="3.7856E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/hip4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip4"
+    type="revolute">
+    <origin
+      xyz="-0.1025 -0.065 0"
+      rpy="1.5708 0 2.4418" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="3" />
+  </joint>
+  <link
+    name="leg4">
+    <inertial>
+      <origin
+        xyz="-0.019147 0.043897 -0.037918"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071825" />
+      <inertia
+        ixx="2.3125E-06"
+        ixy="1.4767E-06"
+        ixz="-1.575E-21"
+        iyy="2.3213E-06"
+        iyz="9.5291E-22"
+        izz="4.6039E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1 (1)/meshes/leg4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg4"
+    type="revolute">
+    <origin
+      xyz="-0.025418 -0.01358 -0.01"
+      rpy="-1.5708 -0.027408 1.5708" />
+    <parent
+      link="hip4" />
+    <child
+      link="leg4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="3" />
+  </joint>
+</robot>
